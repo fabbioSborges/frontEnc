@@ -10,7 +10,9 @@ export const Badge = styled.button`
   //background:none;
   background:transparent;
   border: 0;
-  position: relative;
+  position: absolute;
+  left: calc(100% - 75px);
+  top: calc(20% + 5px);
   ${props=>props.hasUnread && css`
     ::after{
       position:absolute;
@@ -73,6 +75,8 @@ export const ListaNotificaoes = styled.div`
   background: rgba(0,0,0,0.6);
   border-radius: 4px;
   padding: 10px 15px;
+  display: ${props => (props.visivel? 'block':'none')};
+
   &::before{
     content:'';
     position:absolute;
